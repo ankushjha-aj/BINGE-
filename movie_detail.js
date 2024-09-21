@@ -70,7 +70,7 @@ let flag = 0;
 button.addEventListener('click', function () {
     if (flag == 0) {
         body.setAttribute('theme', 'dark');
-        button.innerHTML = '🌞';
+        button.innerHTML = '🔅';
         flag = 1;
     }
     else {
