@@ -63,4 +63,21 @@ async function displayMovieDetails() {
     document.getElementById('movie-details-container').innerHTML = movieDetailCard;
 }
 
+const body = document.querySelector('body');
+const attr = body.getAttribute('theme');
+const button = document.querySelector('#theme-toggle');
+let flag = 0;
+button.addEventListener('click', function () {
+    if (flag == 0) {
+        body.setAttribute('theme', 'dark');
+        button.innerHTML = '🌞';
+        flag = 1;
+    }
+    else {
+        body.setAttribute('theme', 'light');
+        button.innerHTML = '🌙'
+        flag = 0;
+    }
+});
+
 document.addEventListener('DOMContentLoaded', displayMovieDetails);
